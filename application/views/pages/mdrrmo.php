@@ -69,3 +69,70 @@
             </p>
         </div>
     </div>
+    <div id="safety">
+        <div class="d-flex justify-content-center">
+            <img src="<?php echo base_url();?>assets/images/safety/safety.png" alt="Safety">
+        </div>
+        <div id="safetyContent">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <p class="titles">Lindol</p>
+                    <p class="descriptions">Ito ay ang pag-alog ng lupa 
+                        bunga ng biglaang paggalaw ng mga 
+                        bato sa ilalim nito. Ito ay maaring mahina hanggang 
+                        sa malakas na nakapagdudulot ng iba’t – ibang pinsala o 
+                        panganib gaya ng pagyanig o ground shaking, pagbitak ng lupa o 
+                        rupture, paglambot ng lupa o liquefaction, pagguho ng lupa o landslide o 
+                        malahiganteng alon o tsunami.
+                    </p>
+                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="titles">Bagyo</p>
+                    <p class="descriptions">
+                        Ito ay isang pagbabago sa normal na 
+                        kalagayan ng panahon at karaniwang may kasamang malalakas na
+                         ihip ng hangin na may pag-ulan, pagkulog at pagkidlat. Ito ang 
+                         nagiging sanhi ng pagbaha lalo na sa kapatagan, landslide o pagguho 
+                         ng lupa at storm surge o daluyong sa mga tabing dagat.
+                    </p>
+                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <p class="titles">Kaligtasan sa Kalsada</p>
+                    <p class="descriptions">
+                        Tinatayang nasa 1.3 milyon na tao ang mamatay 
+                        sa buong mundo taon-taon dahil sa mga aksidente sa kalsada. 
+                        Ito ay mga pang araw-araw na sakunang sanhi ng kapabayaan ng tao. 
+                        Ang dulot nito ay peligro sa buhay, pinsala sa ari-arian, at trapiko na
+                         may epekto sa ekonomiya.
+                    </p>
+                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="titles">Sunog</p>
+                    <p class="descriptions">
+                        Ang sunog ay kadalasang nangyayari tuwing tag-init, 
+                        lalo na kapag buwan ng Marso. Kung kaya idineklara ito ng gobyerno 
+                        ng Pilipinas bilang Buwan ng Pag-iwas sa Sunog o Fire Prevention 
+                        Month. Ayon sa Presidential Proclamation No. 115-A layunin ng taunang 
+                        pagdiriwang na ito na itaas ang anatas ng kamalayan ng publiko upang 
+                        makaiwas sa sunog at masagip ang inosenteng mga buhay at mahahalagang 
+                        ari-arian na kadalasang nadadamay at nasisira dahil sa mga ganitong trahedya.
+                    </p>
+                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <p class="titles">Pagguho ng Lupa</p>
+                    <p class="descriptions">
+                        Nagaganap ang pagguho ng lupa o landslide sa mga burol at 
+                        bundok dahil sa malakas o tuloy-tuloy na pag-ulan o dahil sa lindol. 
+                        Posibleng bunga rin ito ng pagmimina, paggawa ng kalsada, di-akmang paggamit 
+                        ng lupa at pagputol ng mga puno sa kagubatan.
+                    </p>
+                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>

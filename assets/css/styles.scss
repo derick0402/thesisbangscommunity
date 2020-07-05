@@ -3,9 +3,13 @@
     height: 80px;
     font-size: 20px;
 }
-
+$whiteBg:white;
+$paddingContent : 50px 100px;
+$mainTextColor:#5a5c69;
 body{
     background: rgba(243, 239, 239, 0.959);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 button{
     &:focus{
@@ -80,15 +84,14 @@ button{
     
 }
 #about{
-    background: white;
+    background: $whiteBg;
     width: 100%;
     height: auto;
     #aboutContent{
         text-align: center;
-        padding: 50px 100px;
-        color: #5a5c69;
+        padding: $paddingContent;
+        color: $mainTextColor;
         #title{
-            
             font-weight: bold;
             font-size: 50px;
         }
@@ -98,6 +101,39 @@ button{
         }
         #descriptions{
             line-height: 35px;
+        }
+    }
+}
+#safety{
+    img{
+        width: 500px;
+        height: 300px;
+        text-align: center;
+        display: flex;
+    }
+    #safetyContent{
+        padding: $paddingContent;
+        background:$whiteBg;
+        color: $mainTextColor;
+        width: 100%;
+        .row{
+            .col-lg-6{
+                padding: 10px 50px;
+            }
+        }
+        .titles{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .descriptions{
+            line-height: 30px;
+            text-align: justify;
+        }
+        a{
+            font-weight: bold;
+            &:hover{
+                text-decoration: none;
+            }
         }
     }
 }
@@ -145,8 +181,23 @@ button{
         
     }
     #about{
+        width: 100% !important;
         #aboutContent{
             padding:10px 30px;
+        }
+    }
+    #safety{
+        img{
+            width: 100%;
+            height: 200px;
+        }
+        #safetyContent{
+            padding:10px 30px;
+            .row{
+                .col-lg-6{
+                    padding: 10px 20px;
+                }
+            }
         }
     }
     
