@@ -48,9 +48,9 @@
             
             <div class="mainButtons">
                 <button id="homeBtn" class="btn clickBtn" href="">Home</button>
-                <button id="aboutBtn" class="btn clickBtn" href="">About</button>
                 <button id="contactsBtn" class="btn clickBtn" href="">Contacts</button>
                 <button id="safetyBtn" class="btn clickBtn" href="">Safety Precautions</button>
+                <button id="aboutBtn" class="btn clickBtn" href="">About</button>
                 <button id="hazardBtn" class="btn clickBtn" href="">Hazard Maps</button>
                 <button id="evacuationBtn" class="btn clickBtn" href="">Evacuation Centers</button>
             </div>
@@ -60,9 +60,9 @@
         <button class="btn pull-left" id="closeBtn"><i class="fa fa-times"></i></button>
         <div class="noneDesktopButtons">
             <button id="homeBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Home</button>
-            <button id="aboutBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">About</button>
             <button id="contactsBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Contacts</button>
             <button id="safetyBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Safety Precautions</button>
+            <button id="aboutBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">About</button>
             <button id="hazardBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Hazard Maps</button>
             <button id="evacuationBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Evacuation Centers</button>
         </div>
