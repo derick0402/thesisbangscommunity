@@ -2,6 +2,7 @@
 <head>
     <meta charset="utf-8">
     <title>ERRA</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -19,28 +20,6 @@
 </head>
 <body>
     <div class="header">
-        <!-- <div class="row">
-            <div class="col-lg-1">
-                <a href="">
-                    <img class="erralogo" src="<?php echo base_url();?>assets/images/erralogo.png" alt="erra">
-                </a>
-            </div>
-            <div class="col-lg-1">
-                <a href="">Home</a>
-            </div>
-            <div class="col-lg-1">
-                <a href="">About</a>
-            </div>
-            <div class="col-lg-2">
-                <a href="">Safety Precautions</a>
-            </div>
-            <div class="col-lg-2">
-                <a href="">Hazard Maps</a>
-            </div>
-            <div class="col-lg-2">
-                <a href="">Evacuation Centers</a>
-            </div>
-        </div> -->
         <div class="buttonsLeft">
             <a href="" class="logoBtn">
                 <img class="erralogo" src="<?php echo base_url();?>assets/images/erralogo.png" alt="erra">

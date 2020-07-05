@@ -1,4 +1,4 @@
-    <div id="home">
+<div id="home">
         <div id="carouselImages" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -83,9 +83,10 @@
                     <p class="hotlineNumber">(046) 430-1666</p>
                 </div>
             </div>
-            
+            <br/><br/><br/><br/>
             
         </div>
+        
     </div><br/><br/>
     <div id="safety">
         <div class="d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1000">
@@ -151,8 +152,9 @@
                     <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
+            <br/><br/><br/><br/>
         </div>
-
+       
     </div><br/><br/>
     <div id="about" >
         <div id="aboutContent" >

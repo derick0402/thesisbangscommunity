@@ -11,6 +11,7 @@ body{
     background: rgba(243, 239, 239, 0.959);
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+
 }
 button{
     &:focus{
@@ -92,6 +93,7 @@ button{
     width: 100%;
     height: auto;
     #aboutContent{
+        
         text-align: center;
         padding: $paddingContent;
         color: $mainTextColor;
@@ -110,7 +112,7 @@ button{
 }
 #contact{
     background: $whiteBg;
-    width: 100%;
+    width: 100% !important;
     height: auto;
     #contactContent{
         text-align: center;
@@ -208,6 +210,7 @@ button{
     }
     #about{
         width: 100% !important;
+        margin: 0 auto;
         #aboutContent{
             padding:10px 30px;
         }

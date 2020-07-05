@@ -121,7 +121,7 @@ button:focus {
 
 #contact {
   background: white;
-  width: 100%;
+  width: 100% !important;
   height: auto;
 }
 
@@ -222,6 +222,7 @@ button:focus {
   }
   #about {
     width: 100% !important;
+    margin: 0 auto;
   }
   #about #aboutContent {
     padding: 10px 30px;
