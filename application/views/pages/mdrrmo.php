@@ -1,4 +1,4 @@
-<div id="home">
+    <div id="home">
         <div id="carouselImages" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -103,7 +103,7 @@
                         rupture, paglambot ng lupa o liquefaction, pagguho ng lupa o landslide o 
                         malahiganteng alon o tsunami.
                     </p>
-                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                    <a href="<?php echo base_url()?>lindol">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Bagyo</p>
@@ -151,7 +151,7 @@
                     <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
-            <br/><br/><br/><br/>
+            
         </div>
        
     </div><br/><br/>

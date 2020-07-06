@@ -157,7 +157,6 @@ button:focus {
 
 #safety #safetyContent {
   padding: 50px 100px;
-  background: white;
   color: #494848f3;
   width: 100%;
 }
@@ -206,6 +205,45 @@ button:focus {
   color: white;
 }
 
+#disaster {
+  width: 100%;
+  top: 102px;
+  position: relative;
+  padding: 50px 100px;
+  color: #494848f3;
+}
+
+#disaster #disasterTitle {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#disaster .descriptions {
+  padding-right: 20px;
+  padding-left: 20px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+#disaster .mainSubDescriptions {
+  padding-right: 40px;
+  padding-left: 40px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+#disaster .subUl {
+  padding: 0px 80px;
+}
+
+#disaster ul {
+  list-style-type: decimal;
+}
+
+#disaster ul li {
+  line-height: 30px;
+}
+
 @media screen and (max-width: 700px) {
   .header .buttonsLeft .mainButtons, .header .buttonsLeft .logoBtn {
     display: none;
@@ -238,6 +276,9 @@ button:focus {
     padding: 10px 20px;
   }
   #contact #contactContent {
+    padding: 10px 30px;
+  }
+  #disaster {
     padding: 10px 30px;
   }
 }

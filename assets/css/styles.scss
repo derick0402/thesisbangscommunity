@@ -141,7 +141,7 @@ button{
     }
     #safetyContent{
         padding: $paddingContent;
-        background:$whiteBg;
+        // background:$whiteBg;
         color: $mainTextColor;
         width: 100%;
         .row{
@@ -183,6 +183,39 @@ button{
         text-align: justify;
         color:white;
         
+    }
+}
+
+#disaster{
+    width: 100%;
+    top: 102px;
+    position: relative;
+    padding: $paddingContent;
+    color: $mainTextColor;
+    #disasterTitle{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .descriptions{
+        padding-right: 20px;
+        padding-left: 20px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    .mainSubDescriptions{
+        padding-right: 40px;
+        padding-left: 40px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    .subUl{
+        padding: 0px 80px;
+    }
+    ul{
+        list-style-type: decimal;
+        li{
+            line-height: 30px;
+        }
     }
 }
 @media screen and (max-width:700px){
@@ -233,5 +266,8 @@ button{
         #contactContent{
             padding:10px 30px;
         }
+    }
+    #disaster{
+        padding:10px 30px;
     }
 }
