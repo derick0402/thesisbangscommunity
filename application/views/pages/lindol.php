@@ -9,7 +9,7 @@
         malahiganteng alon o tsunami.
     </p>
     <p id="disasterTitle">Mga dapat gawin bago magka-lindol:</p>
-    <ul >
+    <ul class="subUl">
         <li>Alamin kung ang inyong lugar ay 
         delikado sa lindol. Kung hindi maiiwasan 
         ang pagtatayo ng bahay, sundin ang nararapat na disenyo para dito.</li>
@@ -178,4 +178,6 @@
         </li>
 
     </ul>
+    <br/>
+    <span>Source: <a href="<?php echo base_url();?>references">References used</a></span>
 </div>

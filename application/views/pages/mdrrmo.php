@@ -114,7 +114,7 @@
                          nagiging sanhi ng pagbaha lalo na sa kapatagan, landslide o pagguho 
                          ng lupa at storm surge o daluyong sa mga tabing dagat.
                     </p>
-                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                    <a href="<?php echo base_url()?>bagyo">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Kaligtasan sa Kalsada</p>
