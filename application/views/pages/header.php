@@ -34,9 +34,9 @@
                 <button id="evacuationBtn" class="btn clickBtn" href="">Evacuation Centers</button>
             </div>
             <button class="btn" id="menu"><i class="fa fa-bars"></i></button>
-            
+            <button class="btn pull-left" id="closeBtn"><i class="fa fa-times"></i></button>
         </div>
-        <button class="btn pull-left" id="closeBtn"><i class="fa fa-times"></i></button>
+        
         <div class="noneDesktopButtons">
             <button id="homeBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Home</button>
             <button id="contactsBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Contacts</button>

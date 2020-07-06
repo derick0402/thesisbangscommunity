@@ -44,6 +44,16 @@ button:focus {
   font-size: 20px;
 }
 
+.header .buttonsLeft #closeBtn {
+  right: 10px;
+  top: 0px;
+  display: none;
+  position: absolute;
+  line-height: 65px;
+  height: 80px;
+  font-size: 20px;
+}
+
 .header .buttonsLeft .mainButtons {
   margin-left: 100px;
 }
@@ -65,16 +75,6 @@ button:focus {
 .header .buttonsLeft .mainButtons button:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-#closeBtn {
-  right: 10px;
-  top: 0px;
-  display: none;
-  position: absolute;
-  line-height: 65px;
-  height: 80px;
-  font-size: 20px;
 }
 
 #home {

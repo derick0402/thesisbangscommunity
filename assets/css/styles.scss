@@ -42,7 +42,16 @@ button{
             display: none;
             @include mobile();
         }
-        
+        #closeBtn{
+            right: 10px;
+            top: 0px;
+            display: none;
+            position: absolute;
+            @include mobile();
+            // display: none;
+            // float: right;
+            // @include mobile();
+        }
         .mainButtons{
             margin-left: 100px;
             button{
@@ -64,16 +73,7 @@ button{
     }
    
 }
-#closeBtn{
-    right: 10px;
-    top: 0px;
-    display: none;
-    position: absolute;
-    @include mobile();
-    // display: none;
-    // float: right;
-    // @include mobile();
-}
+
 #home{
     margin-top: 80px;
     text-align: center;

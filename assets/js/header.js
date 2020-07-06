@@ -1,11 +1,46 @@
 $(document).ready(function(){
     AOS.init();
     $('.clickBtn').on('click',function(e){
-        change_color('#'+e.target.id);
+        var id = e.target.id;
+        change_color('#'+id);
+        var target ="";
+        if(id == "homeBtn"){
+            target = $('#home');
+        }
+        else if(id == "contactsBtn"){
+            target = $('#contact');
+        }
+        else if(id == "safetyBtn"){
+            target = $('#safety');
+        }
+        else if(id == "aboutBtn"){
+            target = $('#about');
+        }
+        animate_onclick_scroll(target)
     })
     $('.clickBtnSmallerScreen').on('click',function(e){
-        change_color_small_screens('#'+e.target.id);
+        var id = e.target.id;
+        change_color_small_screens('#'+id);
+        var target ="";
+        if(id == "homeBtnSmallerScreen"){
+            target = $('#home');
+        }
+        else if(id == "contactsBtnSmallerScreen"){
+            target = $('#contact');
+        }
+        else if(id == "safetyBtnSmallerScreen"){
+            target = $('#safety');
+        }
+        else if(id == "aboutBtnSmallerScreen"){
+            target = $('#about');
+        }
+        animate_onclick_scroll(target)
     })
+    function animate_onclick_scroll(target){
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top-100
+        }, 1000);
+    }
     function change_color_small_screens(btName){
         $('.noneDesktopButtons button').css({
             'border-bottom':'0px',
@@ -31,8 +66,8 @@ $(document).ready(function(){
         var elementTop = $(this).offset().top;
         var elementBottom = elementTop + $(this).outerHeight();
     
-        var viewportTop = $(window).scrollTop();
-        var viewportBottom = viewportTop + $(window).height() +100;
+        var viewportTop = $(window).scrollTop() + 100;
+        var viewportBottom = viewportTop + $(window).height();
     
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };

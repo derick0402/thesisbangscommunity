@@ -28,13 +28,13 @@
     </div><br/>
     <div id="contact">
         <div id="contactContent">
-            <p id="title" data-aos="fade-right" data-aos-duration="1000">Contacts</p>
-            <p data-aos="fade-right" data-aos-duration="1000">
+            <p id="title" data-aos="fade-up" data-aos-duration="1000">Contacts</p>
+            <p data-aos="fade-up" data-aos-duration="1000">
                 Para sa mabilisang aksyon mula sa Carmona Municipal Disaster Risk
                 Reduction and Management Office, tumawag lamang sa mga sumusunod na hotline.
             </p>
             <br/>
-            <div class="row justify-content-md-center" data-aos="fade-right" data-aos-duration="1000">
+            <div class="row justify-content-md-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-lg-4">
                     <p class="hotlineTitle">MDRRMO Emergency Report Operations</p>
                 </div>
@@ -42,7 +42,7 @@
                     <p class="hotlineNumber">(0917) 112 02191</p>
                 </div>
             </div>
-            <div class="row justify-content-md-center" data-aos="fade-left" data-aos-duration="1000">
+            <div class="row justify-content-md-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-lg-4">
                     <p class="hotlineTitle">Pagamutang Bayan ng Carmona</p>
                 </div>
@@ -50,7 +50,7 @@
                     <p class="hotlineNumber">(0917) 112 0291</p>
                 </div>
             </div>
-            <div class="row justify-content-md-center" data-aos="fade-right" data-aos-duration="1000">
+            <div class="row justify-content-md-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-lg-4">
                     <p class="hotlineTitle">Carmona Medical Center</p>
                 </div>
@@ -58,7 +58,7 @@
                     <p class="hotlineNumber">(0917) 112 0291</p>
                 </div>
             </div>
-            <div class="row justify-content-md-center" data-aos="fade-left" data-aos-duration="1000">
+            <div class="row justify-content-md-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-lg-4">
                     <p class="hotlineTitle">Municipality of Carmona</p>
                 </div>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             
-            <div class="row justify-content-md-center" data-aos="fade-left" data-aos-duration="1000">
+            <div class="row justify-content-md-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-lg-4">
                     <p class="hotlineTitle">PNP Carmona</p>
                 </div>
@@ -75,7 +75,7 @@
                     <p class="hotlineNumber">(046) 430-0911</p>
                 </div>
             </div>
-            <div class="row justify-content-md-center" data-aos="fade-right" data-aos-duration="1000">
+            <div class="row justify-content-md-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-lg-4">
                     <p class="hotlineTitle">BFP Carmona</p>
                 </div>
@@ -83,18 +83,17 @@
                     <p class="hotlineNumber">(046) 430-1666</p>
                 </div>
             </div>
-            <br/><br/><br/><br/>
             
         </div>
         
-    </div><br/><br/>
+    </div>
     <div id="safety">
-        <div class="d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1000">
+        <div class="d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
             <img src="<?php echo base_url();?>assets/images/safety/safety.png" alt="Safety">
         </div>
         <div id="safetyContent">
             <div class="row">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Lindol</p>
                     <p class="descriptions">Ito ay ang pag-alog ng lupa 
                         bunga ng biglaang paggalaw ng mga 
@@ -106,7 +105,7 @@
                     </p>
                     <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Bagyo</p>
                     <p class="descriptions">
                         Ito ay isang pagbabago sa normal na 
@@ -117,7 +116,7 @@
                     </p>
                     <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Kaligtasan sa Kalsada</p>
                     <p class="descriptions">
                         Tinatayang nasa 1.3 milyon na tao ang mamatay 
@@ -128,7 +127,7 @@
                     </p>
                     <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Sunog</p>
                     <p class="descriptions">
                         Ang sunog ay kadalasang nangyayari tuwing tag-init, 
@@ -141,7 +140,7 @@
                     </p>
                     <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Pagguho ng Lupa</p>
                     <p class="descriptions">
                         Nagaganap ang pagguho ng lupa o landslide sa mga burol at 
@@ -158,10 +157,10 @@
     </div><br/><br/>
     <div id="about" >
         <div id="aboutContent" >
-            <p id="title" data-aos="fade-right" data-aos-duration="1000">About</p>
+            <p id="title" data-aos="fade-up" data-aos-duration="1000">About</p>
             <br/>
-            <p id="whatIs" data-aos="fade-right" data-aos-duration="1000">What is ERRA?</p>
-            <p id="descriptions" data-aos="fade-right" data-aos-duration="1000">
+            <p id="whatIs" data-aos="fade-up" data-aos-duration="1000">What is ERRA?</p>
+            <p id="descriptions" data-aos="fade-up" data-aos-duration="1000">
                 <strong>ERRA or Emergency Report Repository and 
                 Assistant</strong> is a emergency and response tool designed for the Municipal 
                 Disaster Risk Reduction Management Office (MDRRMO) of Carmona. 
@@ -169,28 +168,28 @@
                 statistically generate reports of different incidents and disasters within the Municipality 
                 of Carmona.
             </p>
-            <p id="whatIs" data-aos="fade-right" data-aos-duration="1000">The study of ERRA</p>
-            <p id="descriptions" data-aos="fade-right" data-aos-duration="1000">
+            <p id="whatIs" data-aos="fade-up" data-aos-duration="1000">The study of ERRA</p>
+            <p id="descriptions" data-aos="fade-up" data-aos-duration="1000">
                 The study aims to improve the process making incident 
                 report and responding by using the map for the locality of the Carmona, Cavite. 
                 The system will provide a centralize report repository needed by the office.
             </p>
-            <p id="descriptions" data-aos="fade-right" data-aos-duration="1000">
+            <p id="descriptions" data-aos="fade-up" data-aos-duration="1000">
                 The study will provide an awareness and information to the community about the 
                 natural disasters and accidents that may happened in the community 
                 particular vehicular accident, household accident, landslide, typhoon, 
                 earthquake and flood that may happen to the community.
             </p>
-            <p id="whatIs" data-aos="fade-right" data-aos-duration="1000">The system</p>
-            <p id="descriptions" data-aos="fade-right" data-aos-duration="1000">
+            <p id="whatIs" data-aos="fade-up" data-aos-duration="1000">The system</p>
+            <p id="descriptions" data-aos="fade-up" data-aos-duration="1000">
                 Can record the Basic Dispatch Details such as the location of the incident, 
                 time and date of the inquiry, name of the caller, type of incident, name of 
                 the responders and estimated time of departure and arrival. The system can also 
                 generate a form that collect victim's information such as name, age, sex and condition 
                 of the victim.
             </p>
-            <p id="whatIs" data-aos="fade-right" data-aos-duration="1000">For the communitty</p>
-            <p id="descriptions" data-aos="fade-right" data-aos-duration="1000">
+            <p id="whatIs" data-aos="fade-up" data-aos-duration="1000">For the communitty</p>
+            <p id="descriptions" data-aos="fade-up" data-aos-duration="1000">
                 Residents of Carmona can view latest reports, 
                 safety guidelines, hazard maps, evacuation maps, 
                 emergency hotlines provided by Carmona Municipal Disaster 
