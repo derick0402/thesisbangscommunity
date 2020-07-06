@@ -31,6 +31,7 @@ $(document).ready(function(){
 
     var routing = null;
     var myLocationMarker = null;
+    var allDistance = [];
     var redMarker = L.AwesomeMarkers.icon({
         icon: 'coffee',
         markerColor: 'red'
@@ -39,55 +40,69 @@ $(document).ready(function(){
         var lat = e.latlng.lat;
         var lon = e.latlng.lng;
         var waypoints = [];
-        if(routing != null){
-            routing.spliceWaypoints(0,2);
+        
+        if(myLocationMarker != null){
+            mymap.removeLayer(myLocationMarker)
+            //mymap.removeLayer(clusterMarker)
         }
         myLocationMarker = L.marker([lat,lon], {icon: redMarker}).addTo(mymap);
         evac.forEach(function(element){
-            //waypoints.push(L.latLng(element.latlng))
+            waypoints.push(L.latLng(element['latlng']))
+        })
+        waypoints.push(L.latLng(lat,lon))
+        evac.forEach(function(element){
             routing = L.Routing.control({
                 waypoints:[
-                    L.latLng(element.latlng),
+                    L.latLng(element['latlng']),
                     L.latLng(lat,lon),
                 ],
                 createMarker: function(i, waypoints) {
-                    return L.marker(waypoints.latLng,{icon: redMarker},{draggable:false})
-                        .bindPopup("s").openPopup();
                 },
                 router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
                 routeWhileDragging:false,
-                addWaypoints : false,
-                // lineOptions: {
-                //     styles: [{color: 'blue', opacity: 1, weight: 10}]
-                // }
             }).addTo(mymap);
-            routing.on('routesfound', function(e) {
-                var routes = e.routes;
-                var summary = routes[0].summary;
-                // alert distance and time in km and minutes
-                alert('Total distance is ' + summary.totalDistance / 1000 + ' km and total time is ' + Math.round(summary.totalTime % 3600 / 60) + ' minutes');
-                
-                //$('#touchdownAtSite').val()
-             });
+            allDistance.push(routing)
+            
         })
         
-         //waypoints.push(L.latLng(element.latlng))
-        //  routing = L.Routing.control({
-        //     waypoints:[
-        //         L.latLng(element.latlng),
-        //         L.latLng(lat,lon),
-        //     ],
-        //     createMarker: function(i, waypoints) {
-        //         return L.marker(waypoints.latLng,{icon: redMarker},{draggable:false})
-        //             .bindPopup("s").openPopup();
-        //     },
-        //     router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
-        //     routeWhileDragging:false,
-        //     addWaypoints : false,
-        //     // lineOptions: {
-        //     //     styles: [{color: 'blue', opacity: 1, weight: 10}]
-        //     // }
-        // }).addTo(mymap);
+        get_all_distance();
     })
-
+    function get_all_distance(){
+        var newWaypoints = [];
+        var add = 0;
+        allDistance.forEach(function(element,index){
+            add +=index;
+            element.on('routesfound',function(e){
+                var routes = e.routes;
+                var summary = routes[0].summary;
+                var total = parseFloat(summary.totalDistance)/1000;
+                newWaypoints.push({
+                    "distance":total,
+                    "latlng":element.options.waypoints,
+                })
+            })
+              
+        })
+        setTimeout(function(){
+            allDistance.forEach(function(element){
+                element.spliceWaypoints(0,2);
+            })
+            var filtered = newWaypoints.sort(function(a, b){return a.distance-b.distance});
+            console.log(filtered)
+            nearest_evacuation(filtered[0])
+        },add + 2000);
+    }
+    var newRouting = null;
+    function nearest_evacuation(data){
+        if(newRouting != null){
+            newRouting.spliceWaypoints(0,2);
+        }
+        newRouting = L.Routing.control({
+            waypoints:data['latlng'],
+            createMarker: function(i, waypoints) {
+            },
+            router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
+            routeWhileDragging:false,
+        }).addTo(mymap);
+    }
 })
