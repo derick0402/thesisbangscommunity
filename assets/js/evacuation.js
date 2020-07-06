@@ -29,6 +29,7 @@ $(document).ready(function(){
     var group = L.featureGroup(clusterMarker).addTo(mymap);
     mymap.fitBounds(group.getBounds());
 
+    var loadingRouting = false;
     var routing = null;
     var myLocationMarker = null;
     var allDistance = [];
@@ -40,34 +41,36 @@ $(document).ready(function(){
         var lat = e.latlng.lat;
         var lon = e.latlng.lng;
         var waypoints = [];
+        if(!loadingRouting){
+            loadingRouting = true;
         
-        if(myLocationMarker != null){
-            mymap.removeLayer(myLocationMarker)
-            //mymap.removeLayer(clusterMarker)
+            if(myLocationMarker != null){
+                mymap.removeLayer(myLocationMarker)
+            }
+            myLocationMarker = L.marker([lat,lon], {icon: redMarker}).addTo(mymap);
+            evac.forEach(function(element){
+                waypoints.push(L.latLng(element['latlng']))
+            })
+            waypoints.push(L.latLng(lat,lon))
+            evac.forEach(function(element){
+                routing = L.Routing.control({
+                    waypoints:[
+                        L.latLng(element['latlng']),
+                        L.latLng(lat,lon),
+                    ],
+                    createMarker: function(i, waypoints) {
+                    },
+                    router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
+                    routeWhileDragging:false,
+                }).addTo(mymap);
+                allDistance.push(routing)
+                
+            })
+            get_all_distance();
         }
-        myLocationMarker = L.marker([lat,lon], {icon: redMarker}).addTo(mymap);
-        evac.forEach(function(element){
-            waypoints.push(L.latLng(element['latlng']))
-        })
-        waypoints.push(L.latLng(lat,lon))
-        evac.forEach(function(element){
-            routing = L.Routing.control({
-                waypoints:[
-                    L.latLng(element['latlng']),
-                    L.latLng(lat,lon),
-                ],
-                createMarker: function(i, waypoints) {
-                },
-                router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
-                routeWhileDragging:false,
-            }).addTo(mymap);
-            allDistance.push(routing)
-            
-        })
-        
-        get_all_distance();
     })
     function get_all_distance(){
+        $('#loadingRouting').show();
         var newWaypoints = [];
         var add = 0;
         allDistance.forEach(function(element,index){
@@ -88,7 +91,6 @@ $(document).ready(function(){
                 element.spliceWaypoints(0,2);
             })
             var filtered = newWaypoints.sort(function(a, b){return a.distance-b.distance});
-            console.log(filtered)
             nearest_evacuation(filtered[0])
         },add + 2000);
     }
@@ -103,6 +105,12 @@ $(document).ready(function(){
             },
             router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
             routeWhileDragging:false,
+            addWaypoints : false,
         }).addTo(mymap);
+        var panToLat = data['latlng'][1]['lat']
+        var panToLong = data['latlng'][1]['lng']
+        mymap.panTo(new L.LatLng(panToLat, panToLong));
+        $('#loadingRouting').hide();
+        loadingRouting = false;
     }
 })
