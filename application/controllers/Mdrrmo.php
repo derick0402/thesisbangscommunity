@@ -19,4 +19,9 @@ class Mdrrmo extends CI_Controller {
                 $this->load->view('pages/bagyo');
                 $this->load->view('pages/footer');
         }
+        public function kalsada(){
+                $this->load->view('pages/header');
+                $this->load->view('pages/kalsada');
+                $this->load->view('pages/footer');
+        }
 }

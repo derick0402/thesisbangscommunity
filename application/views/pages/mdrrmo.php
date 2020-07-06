@@ -125,7 +125,7 @@
                         Ang dulot nito ay peligro sa buhay, pinsala sa ari-arian, at trapiko na
                          may epekto sa ekonomiya.
                     </p>
-                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                    <a href="<?php echo base_url()?>kaligtasansakalsada">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Sunog</p>

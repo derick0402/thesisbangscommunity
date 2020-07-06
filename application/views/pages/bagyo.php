@@ -106,4 +106,6 @@
             Bigyan ng Cardiopulmonary Resuscitation (CPR) o paunang lunas kung kinakailangan.
         </li>
     </ul>
+    <br/>
+    <span>Source: <a href="<?php echo base_url();?>references">References used</a></span>
 </div>
