@@ -7,3 +7,4 @@
     </div>
 </div>
 <script src="<?php echo base_url();?>assets/js/evacuation.js"></script>
+<script src="<?php echo base_url();?>assets/js/evacuation_list.js"></script>
