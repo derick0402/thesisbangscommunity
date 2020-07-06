@@ -3,11 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mdrrmo extends CI_Controller {
 
-	public function index()
+	public function home($page = 'home')
 	{
-                $this->load->view('pages/header');
-                $this->load->view('pages/mdrrmo');
-                $this->load->view('pages/footer');
+                if($page == "" || $page == "home" || $page == "contacts" || $page == "safety" || $page == "about"){
+                        //show_404();
+                        $this->load->view('pages/header');
+                        $this->load->view('pages/mdrrmo');
+                        $this->load->view('pages/footer');
+                }
+                else{
+                        show_404();
+                }
+                
         }
         public function lindol(){
                 $this->load->view('pages/header');

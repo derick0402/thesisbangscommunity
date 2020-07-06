@@ -1,5 +1,21 @@
 $(document).ready(function(){
     AOS.init();
+    check_url();
+    function check_url(){
+        if (window.location.href.indexOf("#home") > -1) {
+            animate_onclick_scroll($('#home'));
+        }
+        if (window.location.href.indexOf("#contacts") > -1) {
+            animate_onclick_scroll($('#contact'));
+        }
+        if (window.location.href.indexOf("#safety") > -1) {
+            animate_onclick_scroll($('#safety'));
+        }
+        if (window.location.href.indexOf("#about") > -1) {
+            animate_onclick_scroll($('#about'));
+        }
+    }
+    
     $('.clickBtn').on('click',function(e){
         var id = e.target.id;
         change_color('#'+id);
@@ -17,6 +33,7 @@ $(document).ready(function(){
             target = $('#about');
         }
         animate_onclick_scroll(target)
+        
     })
     $('.clickBtnSmallerScreen').on('click',function(e){
         var id = e.target.id;
@@ -42,7 +59,7 @@ $(document).ready(function(){
         }, 1000);
     }
     function change_color_small_screens(btName){
-        $('.noneDesktopButtons button').css({
+        $('.noneDesktopButtons a').css({
             'border-bottom':'0px',
             'color':'white'
         });
@@ -52,7 +69,7 @@ $(document).ready(function(){
         });
     }
     function change_color(btName){
-        $('.mainButtons button').css({
+        $('.mainButtons a').css({
             'color':'#777',
             'border':'none',
         });

@@ -58,7 +58,7 @@ button:focus {
   margin-left: 100px;
 }
 
-.header .buttonsLeft .mainButtons button {
+.header .buttonsLeft .mainButtons a {
   color: #777;
   font-size: 15px;
   font-weight: 500;
@@ -66,13 +66,13 @@ button:focus {
   line-height: 65px;
 }
 
-.header .buttonsLeft .mainButtons button:hover {
+.header .buttonsLeft .mainButtons a:hover {
   text-decoration: none;
   color: black;
   border-bottom: 3px solid green !important;
 }
 
-.header .buttonsLeft .mainButtons button:focus {
+.header .buttonsLeft .mainButtons a:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -198,7 +198,7 @@ button:focus {
   padding: 20px 20px;
 }
 
-.noneDesktopButtons button {
+.noneDesktopButtons a {
   float: left;
   clear: left;
   text-align: justify;
