@@ -88,25 +88,25 @@ $(document).ready(function(){
     
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
-    $(document).on('resize scroll', function() {
+    // $(document).on('resize scroll', function() {
         
-        if($('#home').isInViewport()){
-            change_color('#homeBtn')
-            change_color_small_screens('#homeBtnSmallerScreen')
-        }
-        else if($('#contact').isInViewport()){
-            change_color('#contactsBtn')
-            change_color_small_screens('#contactsBtnSmallerScreen')
-        }
-        else if($('#safety').isInViewport()){
-            change_color('#safetyBtn')
-            change_color_small_screens('#safetyBtnSmallerScreen')
-        }
-        else if ($('#about').isInViewport()) {
-            change_color('#aboutBtn');
-            change_color_small_screens('#aboutBtnSmallerScreen');
-        }
-    });
+    //     if($('#home').isInViewport()){
+    //         change_color('#homeBtn')
+    //         change_color_small_screens('#homeBtnSmallerScreen')
+    //     }
+    //     else if($('#contact').isInViewport()){
+    //         change_color('#contactsBtn')
+    //         change_color_small_screens('#contactsBtnSmallerScreen')
+    //     }
+    //     else if($('#safety').isInViewport()){
+    //         change_color('#safetyBtn')
+    //         change_color_small_screens('#safetyBtnSmallerScreen')
+    //     }
+    //     else if ($('#about').isInViewport()) {
+    //         change_color('#aboutBtn');
+    //         change_color_small_screens('#aboutBtnSmallerScreen');
+    //     }
+    // });
     
     $('#menu').on('click',function(){
         $('.noneDesktopButtons').show('slide');

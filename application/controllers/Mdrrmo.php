@@ -41,4 +41,9 @@ class Mdrrmo extends CI_Controller {
                 $this->load->view('pages/pagguho');
                 $this->load->view('pages/footer');
         }
+        public function evacuation(){
+                $this->load->view('pages/header');
+                $this->load->view('pages/evacuation');
+                $this->load->view('pages/footer');
+        }
 }

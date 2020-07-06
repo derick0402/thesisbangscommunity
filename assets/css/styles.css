@@ -257,6 +257,33 @@ button:focus {
   text-decoration: none;
 }
 
+#evacuation {
+  width: 100%;
+  top: 102px;
+  position: relative;
+  padding: 50px 100px;
+  color: #494848f3;
+  padding: 0px 0px;
+}
+
+#evacuation #evacuationTitle {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+#evacuation #evacuationContent {
+  background: white;
+  width: 100%;
+  padding: 30px 50px;
+}
+
+#evacuation #evacuationContent #mapId {
+  width: 100%;
+  height: 500px;
+  z-index: 0;
+}
+
 @media screen and (max-width: 700px) {
   .header .buttonsLeft .mainButtons, .header .buttonsLeft .logoBtn {
     display: none;

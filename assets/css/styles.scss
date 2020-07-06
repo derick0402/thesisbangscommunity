@@ -3,6 +3,13 @@
     height: 80px;
     font-size: 20px;
 }
+@mixin content() {
+    width: 100%;
+    top: 102px;
+    position: relative;
+    padding: $paddingContent;
+    color: $mainTextColor;
+}
 $whiteBg:white;
 $paddingContent : 50px 100px;
 //$mainTextColor:#5a5c69;
@@ -225,6 +232,25 @@ button{
         font-weight: bold;
         &:hover{
             text-decoration: none;
+        }
+    }
+}
+#evacuation{
+    @include content();
+    padding: 0px 0px;
+    #evacuationTitle{
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+    }
+    #evacuationContent{
+        background: white;
+        width: 100%;
+        padding: 30px 50px;
+        #mapId{
+            width: 100%;
+            height: 500px;
+            z-index: 0;
         }
     }
 }
