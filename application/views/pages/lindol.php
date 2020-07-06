@@ -26,7 +26,7 @@
         daanan palabas ng bahay, gusali, paaralan o kung saan naroroon.</li>
     </ul>
     <p id="disasterTitle">Mga dapat gawin habang lumilindol:</p>
-    <strong class="descriptions">A. Kung nasas loob ng gusali o istraktura: </strong>
+    <strong class="descriptions">A. Kung nasa loob ng gusali o istraktura: </strong>
     <br/>
     <strong class="mainSubDescriptions">
         Maging kalmado at huwag mataranta o mag-panic. 
@@ -51,6 +51,17 @@
         </li>
         <li>
             Patayin ang nakabukas na kalan at iba pang gamit na may apoy.
+        </li>
+    </ul>
+    <strong class="descriptions">B. Kung nasa labas ng bahay o gusali: </strong>
+    <ul class="subUl">
+        <li>
+            Lumayo sa tabing ilog at sa bangin o matataas na lugar na maaaring maapektuhan
+            ng pagguho ng lupa
+        </li>
+        <li>
+            Mag ingat sa bumabagsak na mga bagay. Lumayo sa mga puno, linya ng kuryente, mga poster at
+            konkretong pader.
         </li>
     </ul>
 </div>
