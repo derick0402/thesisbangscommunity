@@ -234,13 +234,18 @@ button:focus {
 
 #disaster .subUl {
   padding: 0px 80px;
-}
-
-#disaster ul {
   list-style-type: decimal;
 }
 
-#disaster ul li {
+#disaster .subUl li {
+  line-height: 30px;
+}
+
+#disaster .placesUl {
+  font-weight: bold;
+}
+
+#disaster .placesUl li {
   line-height: 30px;
 }
 

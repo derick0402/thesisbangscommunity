@@ -210,12 +210,16 @@ button{
     }
     .subUl{
         padding: 0px 80px;
-    }
-    ul{
         list-style-type: decimal;
         li{
             line-height: 30px;
         }
+    }
+    .placesUl{
+        font-weight: bold;
+        li{
+            line-height: 30px;
+        } 
     }
 }
 @media screen and (max-width:700px){

@@ -64,4 +64,118 @@
             konkretong pader.
         </li>
     </ul>
+    <strong class="descriptions">C. Kung nasa underground: </strong>
+    <ul class="subUl">
+        <li>
+            Tumabi sa gilid ng pader upang maprotektahan ang sarli.
+        </li>
+        <li>
+            Patuloy na maglakad sa gilid ng pader hanggang marating ang lagusan.
+        </li>
+        <li>
+            Sumunod sa inuutos ng rescue team.
+        </li>
+    </ul>
+    <strong class="descriptions">D. Kung nasa loob ng sasakyan: </strong>
+    <ul class="subUl">
+        <li>
+            Ihinto ang sasakyan sa gilid ng kalsada at iwasasn ang ilalim ng overpass flyover, 
+            tulay o poste ng kuryente.
+        </li>
+        <li>
+            Manatili sa loob ng sasakyan hanggang huminto ang pagyanig.
+        </li>
+    </ul>
+    <strong class="descriptions">E. Kung nasa loob ng elevator: </strong>
+    <ul class="subUl">
+        <li>
+            Pindutin ang button para sa pinaka malapit na palapag at lumabas
+            sa pinaka malapit na labasan. 
+        </li>
+        <li>
+            Sakaling ang elevator ay huminto sa pagitan ng 2 palapag, tumawag sa emergency 
+            telephone na nasa loob at maghintay sa rescue team sa paghupa ng lindol.                
+        </li>
+    </ul>
+    <p id="disasterTitle">Mga dapat gawin pagkatapos lumindol:</p>
+    <strong class="descriptions">A. Kung nasa bahay: </strong>
+    <ul class="subUl">
+        <li>
+            Agad alamin ang sariling kundisyon at ng mga kasama sa bahay. 
+            Ibigay ang agarang tulong na kailagan. 
+        </li>
+        <li>
+            Magmonitor at makinig sa mga balita.                             
+        </li>
+        <li>
+            Pag-aralan ang kapaligiran at ang kundisyon ng kabahayan – ang linya ng telepono at kuryente, 
+            mga tubo ng tubig at nakaimbak na mga kemikal.                 
+        </li>
+        <li>
+            Sumunod sa mga paalala ng mga awtoridad.                
+        </li>
+        <li>
+            Maging handa sa mga susunod na pagyanig o aftershocks.                 
+        </li>
+        <li>
+            Kung nasa mataas na palapag ng gusali, gamitin ang hagdan sa pagbaba.                            
+        </li>
+    </ul>
+    <strong class="descriptions">B. Kung nasa ibang gusali: </strong>
+    <ul class="subUl">
+        <li>
+            Pumunta sa lugar na ligtas sa mga parte ng bumagsak na gusali o putol na mga kawad ng kuryente.                 
+        </li>
+        <li>
+            Kung naipit sa isang gumuhong gusali huwag gumalaw at iwasang magsindi ng posporo o lighter.                   
+        </li>
+        <li>
+            Tumulong sa mga biktima lalo na kung may kasanayan sa pagre-rescue.               
+        </li>
+        <li>
+            Kung may nakitang pader o tubo, katukin ito upang marinig sa labas. 
+            Puwede ring sumigaw o gamitin ang pito o flashlight.             
+        </li>
+        <li>
+            Takpan ang ilong at bibig ng panyo upang di malanghap ang alikabok na dulot ng mga pagguho.                
+        </li>
+        <li>
+            Manatiling alerto sa mga balita.                          
+        </li>
+        <li>
+            Kung nasa lugar na madaraanan o nakakaranas ng tsunami, pumunta agad sa mataas na lugar.                         
+        </li>
+    </ul>
+    <p id="disasterTitle">Ang napapabalitaang "THE BIG ONE"</p>
+    <p class="descriptions">   
+        Ilang buwan pagpasok ng taong 2015 ay nagging laman ng usap-usapan at nagbigay 
+        ng pangamba ang balita tungkol sa tinatawag na The Big One o ang lindol na maaring 
+        makapagdulot ng malawakang pinsala at kamatayan sa ilang bahagi ng Kamaynilaan at 
+        ng mga karatig lugar. Tinatayang <strong>Magnitude 7.2</strong>
+        ang magiging lakas ng lindol na ito na lilikhain ng paggalaw ng <strong>West Valley Fault 
+        Line</strong> na may habang <strong>100 kilometro</strong> at kumikilos sa loob ng 400 hanggang 600 taon. Natala 
+        ang huling paggalaw nito noong <strong>1658</strong> kung kaya’t sinasabing hinog na ito dahil palapit na 
+        ang <strong>ika-400 na taon</strong>. Binabaybay ng <strong>West Valley Fault Line</strong> at posibleng lubos na 
+        maapektuhan nito ang sumusunod na mga lugar. Hindi bababa sa <strong>30,000</strong> katao ang pinangangambahang 
+        masawi at <strong>100,000</strong> tao ang masugatan, bukod pa sa trilyong pisong halaga ng pinsala 
+        sa imprastraktura at kabuhayan ng maaring idulot ng posibleng paglindol sa bansa.
+    </p>
+    <ul class="placesUl">
+        <li>
+            Bulacan (Dona Remedios Trinidad, Norzagaray at San Jose Del Monte City)
+        </li>
+        <li>
+            Rizal (Rodriguez)
+        </li>
+        <li>
+            Metro Manila (Quezon City, Marikina City, Makati City, Pasig City, Taguig City, Paranaque City)
+        </li>
+        <li>
+            Laguna (San Pedro City, Binan City, Sta. Rosa City, Cabuyao City at Calamba City)
+        </li>
+        <li>
+            Cavite (Carmona, General Mariano Alvarez at Silang)
+        </li>
+
+    </ul>
 </div>
