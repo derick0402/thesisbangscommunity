@@ -29,4 +29,9 @@ class Mdrrmo extends CI_Controller {
                 $this->load->view('pages/sunog');
                 $this->load->view('pages/footer');
         }
+        public function pagguho(){
+                $this->load->view('pages/header');
+                $this->load->view('pages/pagguho');
+                $this->load->view('pages/footer');
+        }
 }

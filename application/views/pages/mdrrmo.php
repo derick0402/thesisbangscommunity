@@ -148,7 +148,7 @@
                         Posibleng bunga rin ito ng pagmimina, paggawa ng kalsada, di-akmang paggamit 
                         ng lupa at pagputol ng mga puno sa kagubatan.
                     </p>
-                    <a href="">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                    <a href="<?php echo base_url()?>pagguho">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
             

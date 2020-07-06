@@ -1,5 +1,5 @@
 <div id="disaster">
-    <p id="disasterTitle">Ano ba ang Sunog?</p>
+    <p id="disasterTitle">Ano nga ba ang Sunog?</p>
     <p class="descriptions">
         Ang sunog ay kadalasang nangyayari tuwing tag-init, lalo na kapag buwan ng Marso. 
         Kung kaya idineklara ito ng gobyerno ng Pilipinas bilang Buwan ng Pag-iwas sa Sunog o 
