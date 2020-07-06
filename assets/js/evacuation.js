@@ -29,6 +29,7 @@ $(document).ready(function(){
     var group = L.featureGroup(clusterMarker).addTo(mymap);
     mymap.fitBounds(group.getBounds());
 
+    var routing = null;
     var myLocationMarker = null;
     var redMarker = L.AwesomeMarkers.icon({
         icon: 'coffee',
@@ -37,10 +38,56 @@ $(document).ready(function(){
     mymap.on('click',function(e){
         var lat = e.latlng.lat;
         var lon = e.latlng.lng;
-        if(myLocationMarker != null){
-            mymap.removeLayer(myLocationMarker)
+        var waypoints = [];
+        if(routing != null){
+            routing.spliceWaypoints(0,2);
         }
-        myLocationMarker = L.marker([lat,lon], {icon: redMarker}).addTo(mymap);  
+        myLocationMarker = L.marker([lat,lon], {icon: redMarker}).addTo(mymap);
+        evac.forEach(function(element){
+            //waypoints.push(L.latLng(element.latlng))
+            routing = L.Routing.control({
+                waypoints:[
+                    L.latLng(element.latlng),
+                    L.latLng(lat,lon),
+                ],
+                createMarker: function(i, waypoints) {
+                    return L.marker(waypoints.latLng,{icon: redMarker},{draggable:false})
+                        .bindPopup("s").openPopup();
+                },
+                router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
+                routeWhileDragging:false,
+                addWaypoints : false,
+                // lineOptions: {
+                //     styles: [{color: 'blue', opacity: 1, weight: 10}]
+                // }
+            }).addTo(mymap);
+            routing.on('routesfound', function(e) {
+                var routes = e.routes;
+                var summary = routes[0].summary;
+                // alert distance and time in km and minutes
+                alert('Total distance is ' + summary.totalDistance / 1000 + ' km and total time is ' + Math.round(summary.totalTime % 3600 / 60) + ' minutes');
+                
+                //$('#touchdownAtSite').val()
+             });
+        })
+        
+         //waypoints.push(L.latLng(element.latlng))
+        //  routing = L.Routing.control({
+        //     waypoints:[
+        //         L.latLng(element.latlng),
+        //         L.latLng(lat,lon),
+        //     ],
+        //     createMarker: function(i, waypoints) {
+        //         return L.marker(waypoints.latLng,{icon: redMarker},{draggable:false})
+        //             .bindPopup("s").openPopup();
+        //     },
+        //     router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
+        //     routeWhileDragging:false,
+        //     addWaypoints : false,
+        //     // lineOptions: {
+        //     //     styles: [{color: 'blue', opacity: 1, weight: 10}]
+        //     // }
+        // }).addTo(mymap);
     })
 
 })
