@@ -230,6 +230,7 @@ button{
     position: relative;
     padding: $paddingContent;
     color: $mainTextColor;
+    padding-bottom: 80px;
     #disasterTitle{
         font-weight: bold;
         font-size: 30px;
@@ -266,10 +267,11 @@ button{
         }
     }
 }
+
 #evacuation{
     @include content();
     padding: 0px 30px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
     #evacuationTitle{
         @include titlePage();
         text-align: center;
@@ -307,7 +309,7 @@ button{
 #hazardMap{
     @include content();
     padding: 0px 30px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
     #hazardMapTitle{
         @include titlePage();
         text-align: center;
@@ -361,6 +363,39 @@ button{
         height: 100%;
     }
 }
+
+footer{
+    position: relative;
+    height: auto;
+    min-height: 150px;
+    width: 100%;
+    background: white;
+    padding: 20px 30px;
+    color:$mainTextColor;
+    span{
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .fb{
+        background:#3B5998;
+        border-radius: 100%;
+        padding: 10px 10px;
+    }
+    .govserv{
+        background:#1cc88a;
+        border-radius: 100%;
+        padding: 10px 10px;
+    }
+    .findglocal{
+        background:black;
+        border-radius: 100%;
+        padding: 10px 10px;
+    }
+    img{
+        width: 20px;
+        height: 20px;
+    }
+}
 @media screen and (max-width:700px){
     .header{
         .buttonsLeft{
@@ -412,13 +447,14 @@ button{
     }
     #disaster{
         padding:10px 30px;
+        padding-bottom: 80px;
         .subUl{
             padding: 0px 30px;
         }
     }
     #evacuation{
         padding: 0px 0px;
-        padding-bottom: 30px;
+        padding-bottom: 80px;
         #evacuationContent{
             padding: 10px 20px;
             #mapId{
@@ -428,7 +464,7 @@ button{
     }
     #hazardMap{
         padding: 0px 0px;
-        padding-bottom: 30px;
+        padding-bottom: 80px;
         #hazardMapContent{
             padding: 10px 20px;
             #mapId{

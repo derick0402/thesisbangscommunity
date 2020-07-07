@@ -223,6 +223,7 @@ button:focus {
   position: relative;
   padding: 50px 100px;
   color: #494848f3;
+  padding-bottom: 80px;
 }
 
 #disaster #disasterTitle {
@@ -276,7 +277,7 @@ button:focus {
   padding: 50px 100px;
   color: #494848f3;
   padding: 0px 30px;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
 }
 
 #evacuation #evacuationTitle {
@@ -353,7 +354,7 @@ button:focus {
   padding: 50px 100px;
   color: #494848f3;
   padding: 0px 30px;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
 }
 
 #hazardMap #hazardMapTitle {
@@ -446,6 +447,44 @@ button:focus {
   height: 100%;
 }
 
+footer {
+  position: relative;
+  height: auto;
+  min-height: 150px;
+  width: 100%;
+  background: white;
+  padding: 20px 30px;
+  color: #494848f3;
+}
+
+footer span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer .fb {
+  background: #3B5998;
+  border-radius: 100%;
+  padding: 10px 10px;
+}
+
+footer .govserv {
+  background: #1cc88a;
+  border-radius: 100%;
+  padding: 10px 10px;
+}
+
+footer .findglocal {
+  background: black;
+  border-radius: 100%;
+  padding: 10px 10px;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+}
+
 @media screen and (max-width: 700px) {
   .header .buttonsLeft .mainButtons, .header .buttonsLeft .logoBtn {
     display: none;
@@ -482,13 +521,14 @@ button:focus {
   }
   #disaster {
     padding: 10px 30px;
+    padding-bottom: 80px;
   }
   #disaster .subUl {
     padding: 0px 30px;
   }
   #evacuation {
     padding: 0px 0px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
   }
   #evacuation #evacuationContent {
     padding: 10px 20px;
@@ -498,7 +538,7 @@ button:focus {
   }
   #hazardMap {
     padding: 0px 0px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
   }
   #hazardMap #hazardMapContent {
     padding: 10px 20px;

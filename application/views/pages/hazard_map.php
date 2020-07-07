@@ -18,4 +18,5 @@
         <div id="legend"></div>
     </div>
 </div>
+<br/><br/>
 <script src="<?php echo base_url();?>assets/js/hazard_map.js"></script>
