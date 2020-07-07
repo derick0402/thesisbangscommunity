@@ -32,6 +32,14 @@
         }
     }
 }
+@mixin titlePage() {
+    font-weight: bold;
+    font-size: 30px;
+    background: #dbecff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color:black
+}
 $whiteBg:white;
 $paddingContent : 50px 100px;
 //$mainTextColor:#5a5c69;
@@ -127,8 +135,7 @@ button{
         padding: $paddingContent;
         color: $mainTextColor;
         #title{
-            font-weight: bold;
-            font-size: 50px;
+            @include titlePage();
         }
         #whatIS{
             font-weight: bold;
@@ -148,9 +155,7 @@ button{
         padding: $paddingContent;
         color: $mainTextColor;
         #title{
-            text-align: center;
-            font-weight: bold;
-            font-size: 50px;
+            @include titlePage()
         }
         .hotlineTitle{
             font-weight: bold;
@@ -263,11 +268,12 @@ button{
 }
 #evacuation{
     @include content();
-    padding: 0px 0px;
+    padding: 0px 30px;
+    padding-bottom: 30px;
     #evacuationTitle{
-        font-weight: bold;
-        font-size: 30px;
+        @include titlePage();
         text-align: center;
+        border: 1px solid gray;
     }
     #evacuationContent{
         background: white;
@@ -300,11 +306,12 @@ button{
 }
 #hazardMap{
     @include content();
-    padding: 0px 0px;
+    padding: 0px 30px;
+    padding-bottom: 30px;
     #hazardMapTitle{
-        font-weight: bold;
-        font-size: 30px;
+        @include titlePage();
         text-align: center;
+        border: 1px solid gray;
     }
     #hazardMapContent{
         background: white;
@@ -402,6 +409,8 @@ button{
         }
     }
     #evacuation{
+        padding: 0px 0px;
+        padding-bottom: 30px;
         #evacuationContent{
             padding: 10px 20px;
             #mapId{
@@ -410,6 +419,8 @@ button{
         }
     }
     #hazardMap{
+        padding: 0px 0px;
+        padding-bottom: 30px;
         #hazardMapContent{
             padding: 10px 20px;
             #mapId{

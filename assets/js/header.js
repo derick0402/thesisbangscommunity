@@ -14,6 +14,14 @@ $(document).ready(function(){
         if (window.location.href.indexOf("#about") > -1) {
             animate_onclick_scroll($('#about'));
         }
+        if(window.location.href.indexOf("hazard_map") > -1){
+            change_color('#hazardBtn');
+            change_color_small_screens('#hazardBtnSmallerScreen');
+        }
+        if(window.location.href.indexOf("evacuation") > -1){
+            change_color('#evacuationBtn');
+            change_color_small_screens('#evacuationBtnSmallerScreen');
+        }
     }
     
     $('.clickBtn').on('click',function(e){

@@ -107,7 +107,11 @@ button:focus {
 
 #about #aboutContent #title {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 30px;
+  background: #dbecff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: black;
 }
 
 #about #aboutContent #whatIS {
@@ -132,9 +136,12 @@ button:focus {
 }
 
 #contact #contactContent #title {
-  text-align: center;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 30px;
+  background: #dbecff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: black;
 }
 
 #contact #contactContent .hotlineTitle {
@@ -268,13 +275,19 @@ button:focus {
   position: relative;
   padding: 50px 100px;
   color: #494848f3;
-  padding: 0px 0px;
+  padding: 0px 30px;
+  padding-bottom: 30px;
 }
 
 #evacuation #evacuationTitle {
   font-weight: bold;
   font-size: 30px;
+  background: #dbecff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: black;
   text-align: center;
+  border: 1px solid gray;
 }
 
 #evacuation #evacuationContent {
@@ -339,13 +352,19 @@ button:focus {
   position: relative;
   padding: 50px 100px;
   color: #494848f3;
-  padding: 0px 0px;
+  padding: 0px 30px;
+  padding-bottom: 30px;
 }
 
 #hazardMap #hazardMapTitle {
   font-weight: bold;
   font-size: 30px;
+  background: #dbecff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: black;
   text-align: center;
+  border: 1px solid gray;
 }
 
 #hazardMap #hazardMapContent {
@@ -457,11 +476,19 @@ button:focus {
   #disaster .subUl {
     padding: 0px 30px;
   }
+  #evacuation {
+    padding: 0px 0px;
+    padding-bottom: 30px;
+  }
   #evacuation #evacuationContent {
     padding: 10px 20px;
   }
   #evacuation #evacuationContent #mapId {
     width: 100%;
+  }
+  #hazardMap {
+    padding: 0px 0px;
+    padding-bottom: 30px;
   }
   #hazardMap #hazardMapContent {
     padding: 10px 20px;

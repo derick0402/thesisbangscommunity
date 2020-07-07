@@ -1,5 +1,9 @@
 <div id="hazardMap">
-    <p id="hazardMapTitle">Hazard Map</p>
+    
+    <div class="d-flex justify-content-center">
+        <span id="hazardMapTitle">Hazard Map</span>
+    </div>
+    <br/>
     <div id="hazardMapContent">
         <div id="mapId">
             <div id="loadingRouting" >

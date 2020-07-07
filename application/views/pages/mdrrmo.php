@@ -28,7 +28,8 @@
     </div><br/>
     <div id="contact">
         <div id="contactContent">
-            <p id="title" data-aos="fade-up" data-aos-duration="1000">Contacts</p>
+            <span id="title" data-aos="fade-up" data-aos-duration="1000">Contacts</span>
+            <br/><br/>
             <p data-aos="fade-up" data-aos-duration="1000">
                 Para sa mabilisang aksyon mula sa Carmona Municipal Disaster Risk
                 Reduction and Management Office, tumawag lamang sa mga sumusunod na hotline.
@@ -183,8 +184,8 @@
     </div><br/><br/>
     <div id="about" >
         <div id="aboutContent" >
-            <p id="title" data-aos="fade-up" data-aos-duration="1000">About</p>
-            <br/>
+            <span id="title" data-aos="fade-up" data-aos-duration="1000">About</span>
+            <br/><br/>
             <p id="whatIs" data-aos="fade-up" data-aos-duration="1000">What is ERRA?</p>
             <p id="descriptions" data-aos="fade-up" data-aos-duration="1000">
                 <strong>ERRA or Emergency Report Repository and 

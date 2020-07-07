@@ -1,5 +1,8 @@
 <div id="evacuation">
-    <p id="evacuationTitle">Evacuation Map</p>
+    <div class="d-flex justify-content-center">
+        <span id="evacuationTitle">Evacuation Map</span>
+    </div>
+    <br/>
     <div id="evacuationContent">
         <p class="titles">Click your location in the map to know the direction of evacuation near you.</p>
         <p class="note">*Note: distance will be based on the route using the main road.</p>

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var map = L.map('mapId',{gestureHandling: true}).setView([14.31798388351653,121.06137514114381], 13);
+    var map = L.map('mapId',{gestureHandling: true}).setView([14.31798388351653,121.06137514114381], 10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
