@@ -15,4 +15,3 @@
     </div>
 </div>
 <script src="<?php echo base_url();?>assets/js/hazard_map.js"></script>
-<!-- <script src="<?php echo base_url();?>assets/js/dummy.js"></script> -->
