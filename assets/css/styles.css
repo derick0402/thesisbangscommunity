@@ -148,7 +148,7 @@ button:focus {
 
 #safety img {
   width: 500px;
-  height: 300px;
+  height: 200px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,6 +163,11 @@ button:focus {
 
 #safety #safetyContent .row .col-lg-6 {
   padding: 10px 50px;
+}
+
+#safety #safetyContent .row .col-lg-6 img {
+  width: 300px;
+  height: 300px;
 }
 
 #safety #safetyContent .titles {
@@ -438,7 +443,7 @@ button:focus {
     height: 200px;
   }
   #safety #safetyContent {
-    padding: 10px 30px;
+    padding: 0px 30px;
   }
   #safety #safetyContent .row .col-lg-6 {
     padding: 10px 20px;

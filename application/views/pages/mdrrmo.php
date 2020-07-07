@@ -94,6 +94,11 @@
         <div id="safetyContent">
             <div class="row">
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url();?>assets/images/safety/lindol.png" alt="Lindol">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Lindol</p>
                     <p class="descriptions">Ito ay ang pag-alog ng lupa 
                         bunga ng biglaang paggalaw ng mga 
@@ -115,6 +120,16 @@
                          ng lupa at storm surge o daluyong sa mga tabing dagat.
                     </p>
                     <a href="<?php echo base_url()?>bagyo">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url();?>assets/images/safety/bagyo.png" alt="Bagyo">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url();?>assets/images/safety/sasakyan.png" alt="Kalsada">
+                    </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Kaligtasan sa Kalsada</p>
@@ -141,6 +156,16 @@
                     <a href="<?php echo base_url()?>sunog">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url();?>assets/images/safety/sunog.png" alt="Sunog">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url();?>assets/images/safety/lupa.png" alt="Lupa">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                     <p class="titles">Pagguho ng Lupa</p>
                     <p class="descriptions">
                         Nagaganap ang pagguho ng lupa o landslide sa mga burol at 
@@ -150,6 +175,7 @@
                     </p>
                     <a href="<?php echo base_url()?>pagguho">Read More <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
+                
             </div>
             
         </div>
