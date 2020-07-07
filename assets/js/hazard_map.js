@@ -28,6 +28,7 @@ $(document).ready(function(){
                                 }
                             }
                         )
+                        
                     })
                     initialize_hazard_map();
                 }
@@ -37,8 +38,9 @@ $(document).ready(function(){
             }
         })
     }
-
+    
     var geojson;
+    
     function initialize_hazard_map(){
         if(geojson){
             geojson.clearLayers();
@@ -47,6 +49,10 @@ $(document).ready(function(){
         geojson = L.geoJson(data, {style: style,onEachFeature: onEachFeature}).addTo(map);
         $('#loadingRouting').hide();
     }
+   
+
+    
+        
     function getColor(d) {
         if(d == "Rain Affected Landslide - Very High"){
             return '#580000';

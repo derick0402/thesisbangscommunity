@@ -336,7 +336,7 @@ button{
             }
             @include loading();
             #loadingRouting{
-                display: block;
+                display: none;
             }
 
         }
