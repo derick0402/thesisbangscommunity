@@ -5,6 +5,14 @@ $(document).ready(function(){
     }).addTo(map);
 
     var data = {"type":"FeatureCollection","features":[]};
+
+    var gs = [];
+    var gr = [];
+    var rrl = [];
+    var rrm = [];
+    var ralm = [];
+    var ralh = [];
+    var ralvh = [];
     get_hazard_map();
     function get_hazard_map(){
         $.ajax({
@@ -18,16 +26,90 @@ $(document).ready(function(){
                         JSON.parse(element.lat_and_long).forEach(function(value){
                             newData.push([value.long,value.lat])
                         })
-                        data.features.push(
-                            {"type":
-                                "Feature",
-                                "id":element.id,
-                                "properties":{"name":"Cavite","density":element.disaster},
-                                "geometry":{"type":"Polygon",
-                                    "coordinates":[newData]
+                        if(element.disaster == "Ground Shaking"){
+                            gs.push(
+                                {"type":
+                                    "Feature",
+                                    "id":element.id,
+                                    "properties":{"name":"Cavite","density":element.disaster},
+                                    "geometry":{"type":"Polygon",
+                                        "coordinates":[newData]
+                                    }
                                 }
-                            }
-                        )
+                            )
+                        }
+                        else if(element.disaster == "Ground Rapture"){
+                            gr.push(
+                                {"type":
+                                    "Feature",
+                                    "id":element.id,
+                                    "properties":{"name":"Cavite","density":element.disaster},
+                                    "geometry":{"type":"Polygon",
+                                        "coordinates":[newData]
+                                    }
+                                }
+                            )
+                        }
+                        else if(element.disaster == "Rainfall Rate - Low"){
+                            rrl.push(
+                                {"type":
+                                    "Feature",
+                                    "id":element.id,
+                                    "properties":{"name":"Cavite","density":element.disaster},
+                                    "geometry":{"type":"Polygon",
+                                        "coordinates":[newData]
+                                    }
+                                }
+                            )
+                        }
+                        else if(element.disaster == "Rainfall Rate - Moderate"){
+                            rrm.push(
+                                {"type":
+                                    "Feature",
+                                    "id":element.id,
+                                    "properties":{"name":"Cavite","density":element.disaster},
+                                    "geometry":{"type":"Polygon",
+                                        "coordinates":[newData]
+                                    }
+                                }
+                            )
+                        }
+                        else if(element.disaster == "Rain Affected Landslide - Moderate"){
+                            ralm.push(
+                                {"type":
+                                    "Feature",
+                                    "id":element.id,
+                                    "properties":{"name":"Cavite","density":element.disaster},
+                                    "geometry":{"type":"Polygon",
+                                        "coordinates":[newData]
+                                    }
+                                }
+                            )
+                        }
+                        else if(element.disaster == "Rain Affected Landslide - High"){
+                            ralh.push(
+                                {"type":
+                                    "Feature",
+                                    "id":element.id,
+                                    "properties":{"name":"Cavite","density":element.disaster},
+                                    "geometry":{"type":"Polygon",
+                                        "coordinates":[newData]
+                                    }
+                                }
+                            )
+                        }
+                        else{
+                            ralvh.push(
+                                {"type":
+                                    "Feature",
+                                    "id":element.id,
+                                    "properties":{"name":"Cavite","density":element.disaster},
+                                    "geometry":{"type":"Polygon",
+                                        "coordinates":[newData]
+                                    }
+                                }
+                            )
+                        }
                         
                     })
                     initialize_hazard_map();
@@ -39,20 +121,42 @@ $(document).ready(function(){
         })
     }
     
-    var geojson;
-    
+    var geoJsonGs;
+    var geoJsonGr;
+    var geoJsonRrl;
+    var geoJsonRrm;
+    var geoJsonRalm;
+    var geoJsonRalh;
+    var geoJsonRalvh;
     function initialize_hazard_map(){
-        if(geojson){
-            geojson.clearLayers();
-        }
-        geojson = L.geoJson();
-        geojson = L.geoJson(data, {style: style,onEachFeature: onEachFeature}).addTo(map);
+        //geojson = L.geoJson();
+        //geojson = L.geoJson(data, {style: style,onEachFeature: onEachFeature}).addTo(map);
+        var gsLayer = L.layerGroup([L.geoJson(gs)]);
+        var grLayer = L.layerGroup([L.geoJson(gr)]);
+        var rrlLayer = L.layerGroup([L.geoJson(rrl)]);
+        var rrmLayer = L.layerGroup([L.geoJson(rrm)]);
+        var ralmLayer = L.layerGroup([L.geoJson(ralm)]);
+        var ralhLayer = L.layerGroup([L.geoJson(ralh)]);
+        var ralvhLayer = L.layerGroup([L.geoJson(ralvh)]);
+        geoJsonGs = L.geoJson(gs, {style: style,onEachFeature: onEachFeature}).addTo(map)
+        geoJsonGr = L.geoJson(gr, {style: style,onEachFeature: onEachFeature}).addTo(map)
+        geoJsonRrl = L.geoJson(rrl, {style: style,onEachFeature: onEachFeature}).addTo(map)
+        geoJsonRrm = L.geoJson(rrm, {style: style,onEachFeature: onEachFeature}).addTo(map)
+        geoJsonRalm = L.geoJson(ralm, {style: style,onEachFeature: onEachFeature}).addTo(map)
+        geoJsonRalh = L.geoJson(ralh, {style: style,onEachFeature: onEachFeature}).addTo(map)
+        geoJsonRalvh = L.geoJson(ralvh, {style: style,onEachFeature: onEachFeature}).addTo(map)
         $('#loadingRouting').hide();
-    }
-   
-
-    
-        
+        var overlayMaps =  {
+            "Ground Shaking": geoJsonGs,
+            "Ground Rapture":geoJsonGr,
+            "Rainfall Rate - Low":geoJsonRrl,
+            "Rainfall Rate - Moderate":geoJsonRrm,
+            "Rain Affected Landslide - Moderate":geoJsonRalm,
+            "Rain Affected Landslide - High":geoJsonRalh,
+            "Rain Affected Landslide - Very High":geoJsonRalvh
+        };
+        L.control.layers(null, overlayMaps).addTo(map);
+    }  
     function getColor(d) {
         if(d == "Rain Affected Landslide - Very High"){
             return '#580000';
@@ -103,7 +207,13 @@ $(document).ready(function(){
         }
     }
     function resetHighlight(e) {
-        geojson.resetStyle(e.target);
+        geoJsonGs.resetStyle(e.target);
+        geoJsonGr.resetStyle(e.target);
+        geoJsonRrl.resetStyle(e.target);
+        geoJsonRrm.resetStyle(e.target);
+        geoJsonRalm.resetStyle(e.target);
+        geoJsonRalh.resetStyle(e.target);
+        geoJsonRalvh.resetStyle(e.target);
     }
     
     function zoomToFeature(e) {
