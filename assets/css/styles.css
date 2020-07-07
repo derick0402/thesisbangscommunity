@@ -282,6 +282,10 @@ button:focus {
   font-size: 18px;
 }
 
+#evacuation #evacuationContent .note {
+  color: red;
+}
+
 #evacuation #evacuationContent #mapId {
   width: 100%;
   height: 500px;
@@ -322,6 +326,90 @@ button:focus {
 #evacuation #evacuationContent #mapId #loadingRouting p {
   font-size: 20px;
   text-align: center;
+}
+
+#hazardMap {
+  width: 100%;
+  top: 102px;
+  position: relative;
+  padding: 50px 100px;
+  color: #494848f3;
+  padding: 0px 0px;
+}
+
+#hazardMap #hazardMapTitle {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+#hazardMap #hazardMapContent {
+  background: white;
+  width: 100%;
+  padding: 30px 50px;
+}
+
+#hazardMap #hazardMapContent #mapId {
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+  border: 2px solid gray;
+}
+
+#hazardMap #hazardMapContent #mapId .info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+#hazardMap #hazardMapContent #mapId .info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+#hazardMap #hazardMapContent #mapId .legend {
+  line-height: 18px;
+  color: #555;
+}
+
+#hazardMap #hazardMapContent #mapId .legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+#hazardMap #hazardMapContent #mapId #loadingRouting {
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.8);
+  z-index: 1002;
+  position: absolute;
+  color: white;
+  display: none;
+}
+
+#hazardMap #hazardMapContent #mapId #loadingRouting .d-flex {
+  height: 100%;
+}
+
+#hazardMap #hazardMapContent #mapId #loadingRouting #loadingRoutingSpinner {
+  height: 100px;
+  width: 100px;
+}
+
+#hazardMap #hazardMapContent #mapId #loadingRouting p {
+  font-size: 20px;
+  text-align: center;
+}
+
+#hazardMap #hazardMapContent #mapId #loadingRouting {
+  display: block;
 }
 
 @media screen and (max-width: 700px) {
@@ -368,6 +456,12 @@ button:focus {
     padding: 10px 20px;
   }
   #evacuation #evacuationContent #mapId {
+    width: 100%;
+  }
+  #hazardMap #hazardMapContent {
+    padding: 10px 20px;
+  }
+  #hazardMap #hazardMapContent #mapId {
     width: 100%;
   }
 }

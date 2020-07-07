@@ -10,6 +10,28 @@
     padding: $paddingContent;
     color: $mainTextColor;
 }
+@mixin loading(){
+    #loadingRouting{
+        width: 100%;
+        height: 100%;
+        background: rgba(1,1,1,0.8);
+        z-index: 1002;
+        position: absolute;
+        color: white;
+        display: none;
+        .d-flex{
+            height: 100%;
+        }
+        #loadingRoutingSpinner{
+            height: 100px;
+            width: 100px;
+        }
+        p{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
 $whiteBg:white;
 $paddingContent : 50px 100px;
 //$mainTextColor:#5a5c69;
@@ -250,6 +272,9 @@ button{
         .titles{
             font-size: 18px;
         }
+        .note{
+            color:red;
+        }
         #mapId{
             width: 100%;
             height: 500px;
@@ -265,26 +290,55 @@ button{
                 height: 200px;
                 overflow-y: auto;
             }
-            #loadingRouting{
-                width: 100%;
-                height: 100%;
-                background: rgba(1,1,1,0.8);
-                z-index: 1002;
-                position: absolute;
-                color: white;
-                display: none;
-                .d-flex{
-                    height: 100%;
-                }
-                #loadingRoutingSpinner{
-                    height: 100px;
-                    width: 100px;
-                }
-                p{
-                    font-size: 20px;
-                    text-align: center;
-                }
+            @include loading();
+        }
+    }
+}
+#hazardMap{
+    @include content();
+    padding: 0px 0px;
+    #hazardMapTitle{
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+    }
+    #hazardMapContent{
+        background: white;
+        width: 100%;
+        padding: 30px 50px;
+        #mapId{
+            width: 100%;
+            height: 500px;
+            z-index: 1;
+            border: 2px solid gray;
+            .info {
+                padding: 6px 8px;
+                font: 14px/16px Arial, Helvetica, sans-serif;
+                background: white;
+                background: rgba(255,255,255,0.8);
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                border-radius: 5px;
             }
+            .info h4 {
+                margin: 0 0 5px;
+                color: #777;
+            }
+            .legend {
+                line-height: 18px;
+                color: #555;
+            }
+            .legend i {
+                width: 18px;
+                height: 18px;
+                float: left;
+                margin-right: 8px;
+                opacity: 0.7;
+            }
+            @include loading();
+            #loadingRouting{
+                display: block;
+            }
+
         }
     }
 }
@@ -345,6 +399,14 @@ button{
     }
     #evacuation{
         #evacuationContent{
+            padding: 10px 20px;
+            #mapId{
+                width: 100%;
+            }
+        }
+    }
+    #hazardMap{
+        #hazardMapContent{
             padding: 10px 20px;
             #mapId{
                 width: 100%;

@@ -46,4 +46,22 @@ class Mdrrmo extends CI_Controller {
                 $this->load->view('pages/evacuation');
                 $this->load->view('pages/footer');
         }
+
+        public function hazardMap(){
+                $this->load->view('pages/header');
+                $this->load->view('pages/hazard_map');
+                $this->load->view('pages/footer');
+        }
+        public function getHazardMapData(){
+                $hazard_map = $this->thesisbangs_community_model->get_hazard_map_data();
+                if($hazard_map){
+                        $this->data['status'] = "success";
+                        $this->data['hazard_map'] = $hazard_map;
+                }
+                else{
+                        $this->data['status'] = "error";
+                        $this->data['message'] = "There was";
+                }
+                echo json_encode($this->data);
+        }
 }

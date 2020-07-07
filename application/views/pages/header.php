@@ -37,6 +37,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js"></script>
     <script src="http://www.liedman.net/lrm-graphhopper/dist/lrm-graphhopper-1.2.0.min.js"></script>
+
+    
 </head>
 <body>
     <div class="header">
@@ -50,7 +52,7 @@
                 <a id="contactsBtn" class="btn clickBtn" href="<?php echo base_url();?>#contacts">Contacts</a>
                 <a id="safetyBtn" class="btn clickBtn" href="<?php echo base_url();?>#safety">Safety Precautions</a>
                 <a id="aboutBtn" class="btn clickBtn" href="<?php echo base_url();?>#about">About</a>
-                <a id="hazardBtn" class="btn clickBtn" href="">Hazard Maps</a>
+                <a id="hazardBtn" class="btn clickBtn" href="<?php echo base_url();?>hazard_map">Hazard Map</a>
                 <a id="evacuationBtn" class="btn clickBtn" href="<?php echo base_url();?>evacuation">Evacuation Centers</a>
             </div>
             <button class="btn" id="menu"><i class="fa fa-bars"></i></button>
@@ -62,7 +64,7 @@
             <a id="contactsBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="<?php echo base_url();?>#contacts">Contacts</a>
             <a id="safetyBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="<?php echo base_url();?>#safety">Safety Precautions</a>
             <a id="aboutBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="<?php echo base_url();?>#about">About</a>
-            <a id="hazardBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="">Hazard Maps</a>
+            <a id="hazardBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="<?php echo base_url();?>hazard_map">Hazard Map</a>
             <a id="evacuationBtnSmallerScreen" class="btn clickBtnSmallerScreen" href="<?php echo base_url();?>evacuation">Evacuation Centers</a>
         </div>
     </div>
