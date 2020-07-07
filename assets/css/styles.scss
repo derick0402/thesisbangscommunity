@@ -353,6 +353,14 @@ button{
         }
     }
 }
+#notFound{
+    width: 100%;
+    height: 100vh;
+    color:blue;
+    .d-flex{
+        height: 100%;
+    }
+}
 @media screen and (max-width:700px){
     .header{
         .buttonsLeft{

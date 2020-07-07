@@ -12,7 +12,10 @@ class Mdrrmo extends CI_Controller {
                         $this->load->view('pages/footer');
                 }
                 else{
-                        show_404();
+                        //show_404();
+                        //$this->load->view('pages/header');
+                        $this->load->view('pages/not_found');
+                        //$this->load->view('pages/footer');
                 }
                 
         }
