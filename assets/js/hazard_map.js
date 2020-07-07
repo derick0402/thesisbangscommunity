@@ -3,9 +3,35 @@ $(document).ready(function(){
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-
+    
     var data = {"type":"FeatureCollection","features":[]};
 
+    var pusher = new Pusher('c4174bd51d7b5fe2877a', {
+        cluster: 'ap1'
+    });
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('hazardMapChanges', data=>{
+        if(data.message == "success"){
+            gs = [];
+            gr = [];
+            rrl = [];
+            rrm = [];
+            ralm = [];
+            ralh = [];
+            ralvh = [];
+            geoJsonGs.clearLayers();;
+            geoJsonGr.clearLayers();;
+            geoJsonRrl.clearLayers();;
+            geoJsonRrm.clearLayers();;
+            geoJsonRalm.clearLayers();;
+            geoJsonRalh.clearLayers();;
+            geoJsonRalvh.clearLayers();
+            map.removeControl(filterControl);
+            get_hazard_map();
+            toast_options(5000);
+            toastr.info('Hazard map has been updated by the admins!');
+        }
+    });
     var gs = [];
     var gr = [];
     var rrl = [];
@@ -128,16 +154,25 @@ $(document).ready(function(){
     var geoJsonRalm;
     var geoJsonRalh;
     var geoJsonRalvh;
+
+    var gsLayer;
+    var grLayer;
+    var rrlLayer;
+    var rrmLayer;
+    var ralmLayer;
+    var ralhLayer;
+    var ralvhLayer;
+    var filterControl;
     function initialize_hazard_map(){
         //geojson = L.geoJson();
         //geojson = L.geoJson(data, {style: style,onEachFeature: onEachFeature}).addTo(map);
-        var gsLayer = L.layerGroup([L.geoJson(gs)]);
-        var grLayer = L.layerGroup([L.geoJson(gr)]);
-        var rrlLayer = L.layerGroup([L.geoJson(rrl)]);
-        var rrmLayer = L.layerGroup([L.geoJson(rrm)]);
-        var ralmLayer = L.layerGroup([L.geoJson(ralm)]);
-        var ralhLayer = L.layerGroup([L.geoJson(ralh)]);
-        var ralvhLayer = L.layerGroup([L.geoJson(ralvh)]);
+        gsLayer = L.layerGroup([L.geoJson(gs)]);
+        grLayer = L.layerGroup([L.geoJson(gr)]);
+        rrlLayer = L.layerGroup([L.geoJson(rrl)]);
+        rrmLayer = L.layerGroup([L.geoJson(rrm)]);
+        ralmLayer = L.layerGroup([L.geoJson(ralm)]);
+        ralhLayer = L.layerGroup([L.geoJson(ralh)]);
+        ralvhLayer = L.layerGroup([L.geoJson(ralvh)]);
         geoJsonGs = L.geoJson(gs, {style: style,onEachFeature: onEachFeature}).addTo(map)
         geoJsonGr = L.geoJson(gr, {style: style,onEachFeature: onEachFeature}).addTo(map)
         geoJsonRrl = L.geoJson(rrl, {style: style,onEachFeature: onEachFeature}).addTo(map)
@@ -155,7 +190,7 @@ $(document).ready(function(){
             "Rain Affected Landslide - High":geoJsonRalh,
             "Rain Affected Landslide - Very High":geoJsonRalvh
         };
-        L.control.layers(null, overlayMaps).addTo(map);
+        filterControl = L.control.layers(null, overlayMaps).addTo(map);
     }  
     function getColor(d) {
         if(d == "Rain Affected Landslide - Very High"){
@@ -272,4 +307,25 @@ $(document).ready(function(){
     };
 
     legend.addTo(map);
+
+
+    function toast_options(duration){
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": duration,
+            "extendedTimeOut": "2000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+    }
 })
