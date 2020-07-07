@@ -38,7 +38,7 @@
     background: #dbecff;
     padding: 10px 30px;
     border-radius: 30px;
-    color:black
+    color:black;
 }
 $whiteBg:white;
 $paddingContent : 50px 100px;
@@ -232,8 +232,8 @@ button{
     color: $mainTextColor;
     padding-bottom: 80px;
     #disasterTitle{
-        font-weight: bold;
-        font-size: 30px;
+        @include titlePage();
+        border: 1px solid gray;
     }
     .descriptions{
         padding-right: 20px;
@@ -396,6 +396,32 @@ footer{
         height: 20px;
     }
 }
+#references{
+    width: 100%;
+    top: 102px;
+    position: relative;
+    padding: $paddingContent;
+    color: $mainTextColor;
+    padding-bottom: 80px;
+    #referencesTitle{
+        @include titlePage();
+        border: 1px solid gray;
+        text-align: center;
+    }
+    .descriptions{
+        padding-right: 20px;
+        padding-left: 20px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    .subUl{
+        padding: 0px 80px;
+        
+        li{
+            line-height: 30px;
+        }
+    }
+}
 @media screen and (max-width:700px){
     .header{
         .buttonsLeft{
@@ -461,6 +487,10 @@ footer{
                 width: 100%;
             }
         }
+    }
+    #references{
+        padding: 0px 0px;
+        padding-bottom: 80px;
     }
     #hazardMap{
         padding: 0px 0px;

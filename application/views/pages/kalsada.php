@@ -6,7 +6,7 @@
         kapabayaan ng tao. Ang dulot nito ay peligro sa buhay, pinsala sa ari-arian, at 
         trapiko na may epekto sa ekonomiya.
     </p>
-    <p id="disasterTitle">Mga paalala:</p>
+    <p id="disasterTitle">Mga paalala</p>
     <ul class="placesUl" style="font-weight:lighter">
         <li>
             Laging kondisyon ang makina, preno at elektrikal ng sasakyan.
@@ -84,7 +84,7 @@
 
         
     </ul>
-    <p id="disasterTitle">Para sa mga pedestrian:</p>
+    <p id="disasterTitle">Para sa mga pedestrian</p>
     <ul class="placesUl" style="font-weight:lighter">
         <li>
             Lumakad sa sidewalk o bangketa.   
@@ -101,7 +101,7 @@
             Huwag paglaruin ang mga bata sa kalsada.
         </li>
     </ul>
-    <p id="disasterTitle">Para sa mga motorista at nagbibisekleta:</p>
+    <p id="disasterTitle">Para sa mga motorista at nagbibisekleta</p>
     <ul class="placesUl" style="font-weight:lighter">
         <li>
             Magsuot ng helmet.
@@ -112,4 +112,5 @@
     </ul>
     <br/>
     <span>Source: <a href="<?php echo base_url();?>references">References used</a></span>
+    <br/><br/><br/>
 </div>

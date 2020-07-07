@@ -6,7 +6,7 @@
         ng pagbaha lalo na sa kapatagan, landslide o pagguho ng lupa at storm surge o daluyong 
         sa mga tabing dagat.
     </p>
-    <p id="disasterTitle">Mga dapat gawin bago dumating ang bagyo o tag-ulan:</p>
+    <p id="disasterTitle">Mga dapat gawin bago dumating ang bagyo o tag-ulan</p>
     <ul class="subUl">
         <li>
             Kumpunihin o ipaayos ang mga sirang parte ng bahay, gaya ng alulod at bubungan.      
@@ -31,7 +31,7 @@
         </li>
         
     </ul>
-    <p id="disasterTitle">Mga dapat gawin habang bumabagyo:</p>
+    <p id="disasterTitle">Mga dapat gawin habang bumabagyo</p>
     <ul class="subUl">
         <li>
             Makinig sa radyo, manood ng telebisyon o makibalita sa kapitbahay 
@@ -57,7 +57,7 @@
             nakasara ang tanke ng gas at nakasusi ang pinto ng bahay.
         </li>
     </ul>
-    <p id="disasterTitle">Mga dapat gawin pagkatapos bumabagyo:</p>
+    <p id="disasterTitle">Mga dapat gawin pagkatapos bumabagyo</p>
     <ul class="subUl">
         <li>
             Suriin ang kundisyon ng lahat ng bahagi ng tahanan.             
@@ -83,7 +83,7 @@
             kuryente (conductor) ay maaring maging sanhi ng pagkakuryente.
         </li>
     </ul>
-    <p id="disasterTitle">Pagsagip sa taong nakuryente:</p>
+    <p id="disasterTitle">Pagsagip sa taong nakuryente</p>
     <ul class="subUl">
         <li>
             Huwag direktang hahawakan ang biktima.          
@@ -108,4 +108,5 @@
     </ul>
     <br/>
     <span>Source: <a href="<?php echo base_url();?>references">References used</a></span>
+    <br/><br/><br/>
 </div>

@@ -8,7 +8,7 @@
         at masagip ang inosenteng mga buhay at mahahalagang ari-arian na kadalasang nadadamay 
         at nasisira dahil sa mga ganitong trahedya.
     </p>
-    <p id="disasterTitle">Mga dapat gawin bago magkasunog:</p>
+    <p id="disasterTitle">Mga dapat gawin bago magkasunog</p>
     <ul class="subUl" style="font-weight:lighter">
         <li>
             Magplano at sanayin ang pamilya dalawang beses sa isang taon sa 
@@ -45,7 +45,7 @@
             lalagyan para sa madaliang paglikas.
         </li>
     </ul>
-    <p id="disasterTitle">Mga dapat gawin habang may sunog:</p>
+    <p id="disasterTitle">Mga dapat gawin habang may sunog</p>
     <ul class="subUl" style="font-weight:lighter">
         <li>
             Huwag magpanik. Panatilihing kalmado hanggang sa marating ang exit. 
@@ -78,7 +78,7 @@
             Kung nasusunog ang iyong damit, agarang huminto, dumapa ata gumulong upang mapuksa ang apoy.  
         </li>
     </ul>
-    <p id="disasterTitle">Mga dapat gawin pagkatapos may sunog:</p>
+    <p id="disasterTitle">Mga dapat gawin pagkatapos may sunog</p>
     <ul class="subUl" style="font-weight:lighter">
         <li>
             Ipaubaya sa mga kinauukulan ang pagkukumpuni ng mga linya ng kuryente, tubig, at telepono.
@@ -102,4 +102,5 @@
     </ul>
     <br/>
     <span>Source: <a href="<?php echo base_url();?>references">References used</a></span>
+    <br/><br/><br/>
 </div>

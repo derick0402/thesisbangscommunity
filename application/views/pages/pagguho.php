@@ -5,7 +5,7 @@
         o tuloy-tuloy na pag-ulan o dahil sa lindol. Posibleng bunga rin ito ng pagmimina, 
         paggawa ng kalsada, di-akmang paggamit ng lupa at pagputol ng mga puno sa kagubatan.
     </p>
-    <p id="disasterTitle">Mga dapat gawin bago magka-landslide:</p>
+    <p id="disasterTitle">Mga dapat gawin bago magka-landslide</p>
     <ul class="subUl" style="font-weight:lighter">
         <li>
             Iwasan ang pagtayo ng bahay o anumang gusali sa matatarik na lugar o maging sa paanan ng bundok.
@@ -31,7 +31,7 @@
             Pumunta sa evacuation center kapag inabisuhan ng mga awtoridad. 
         </li>
     </ul>
-    <p id="disasterTitle">Mga dapat gawin habang mayroong landslide:</p>
+    <p id="disasterTitle">Mga dapat gawin habang mayroong landslide</p>
     <ul class="subUl" style="font-weight:lighter">
         <li>
             Kung biglaan ang pagguho, lumikas agad.  
@@ -47,7 +47,7 @@
             Ipagbigay-alam agad sa mga awtoridad ang nangyaring pagguho sa inyong lugar.
         </li>
     </ul>
-    <p id="disasterTitle">Mga dapat gawin pagkatapos ng landslide:</p>
+    <p id="disasterTitle">Mga dapat gawin pagkatapos ng landslide</p>
     <ul class="subUl" style="font-weight:lighter">
         <li>
             Makinig sa anunsyo o balita tungkol sa mga kaganapan kaugnay ng pagguho.         
@@ -89,4 +89,5 @@
     </ul>
     <br/>
     <span>Source: <a href="<?php echo base_url();?>references">References used</a></span>
+    <br/><br/><br/>
 </div>

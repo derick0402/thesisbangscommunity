@@ -67,4 +67,10 @@ class Mdrrmo extends CI_Controller {
                 }
                 echo json_encode($this->data);
         }
+
+        public function references(){
+                $this->load->view('pages/header');
+                $this->load->view('pages/references');
+                $this->load->view('pages/footer');
+        }
 }

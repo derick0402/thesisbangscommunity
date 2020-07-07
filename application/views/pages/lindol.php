@@ -8,7 +8,8 @@
         rupture, paglambot ng lupa o liquefaction, pagguho ng lupa o landslide o 
         malahiganteng alon o tsunami.
     </p>
-    <p id="disasterTitle">Mga dapat gawin bago magka-lindol:</p>
+    <p id="disasterTitle">Mga dapat gawin bago magka-lindol</p>
+    
     <ul class="subUl">
         <li>Alamin kung ang inyong lugar ay 
         delikado sa lindol. Kung hindi maiiwasan 
@@ -25,7 +26,7 @@
         <li>Alamin ang mga alternatibong lagusan bukod sa karaniwang 
         daanan palabas ng bahay, gusali, paaralan o kung saan naroroon.</li>
     </ul>
-    <p id="disasterTitle">Mga dapat gawin habang lumilindol:</p>
+    <p id="disasterTitle">Mga dapat gawin habang lumilindol</p>
     <strong class="descriptions">A. Kung nasa loob ng gusali o istraktura: </strong>
     <br/>
     <strong class="mainSubDescriptions">
@@ -97,7 +98,7 @@
             telephone na nasa loob at maghintay sa rescue team sa paghupa ng lindol.                
         </li>
     </ul>
-    <p id="disasterTitle">Mga dapat gawin pagkatapos lumindol:</p>
+    <p id="disasterTitle">Mga dapat gawin pagkatapos lumindol</p>
     <strong class="descriptions">A. Kung nasa bahay: </strong>
     <ul class="subUl">
         <li>
@@ -180,4 +181,5 @@
     </ul>
     <br/>
     <span>Source: <a href="<?php echo base_url();?>references">References used</a></span>
+    <br/><br/><br/>
 </div>
