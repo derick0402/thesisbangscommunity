@@ -4,7 +4,7 @@
     </div>
     <br/>
     <div id="evacuationContent">
-        <p class="titles">Click your location in the map to know the direction of evacuation near you.</p>
+        <p class="titles">Search or click your location in the map to know the direction of evacuation near you.</p>
         <p class="note">*Note: distance will be based on the route using the main road.</p>
         <div id="mapId">
             <div id="loadingRouting" >

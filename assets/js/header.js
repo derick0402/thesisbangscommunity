@@ -88,13 +88,16 @@ $(document).ready(function(){
     }
 
     $.fn.isInViewport = function() {
-        var elementTop = $(this).offset().top;
-        var elementBottom = elementTop + $(this).outerHeight();
-    
-        var viewportTop = $(window).scrollTop() + 100;
-        var viewportBottom = viewportTop + $(window).height();
-    
-        return elementBottom > viewportTop && elementTop < viewportBottom;
+        if($(this).length > 0){
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+        
+            var viewportTop = $(window).scrollTop() + 100;
+            var viewportBottom = viewportTop + $(window).height();
+        
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        }
+        
     };
     $(document).on('resize scroll', function() {
         

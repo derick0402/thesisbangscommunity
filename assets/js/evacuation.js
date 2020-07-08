@@ -4,13 +4,30 @@ $(document).ready(function(){
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mymap);
     var markers = L.markerClusterGroup({ animateAddingMarkers : true });
-    // var allEvacuationMarkers = [
-    //     L.marker([14.313263458212489, 121.05750509501351]),
+    
+    // SEARCH CONTROL
+    var searchControl = new L.esri.Controls.Geosearch().addTo(mymap);
+    var results = new L.LayerGroup().addTo(mymap);
+    searchControl.on('results', function(data){
+        results.clearLayers();
+        if(myLocationMarker != null){
+            mymap.removeLayer(myLocationMarker)
+        }
+        for (var i = data.results.length - 1; i >= 0; i--) {
+            // L.marker(data.results[i].latlng).addTo(mymap)
+            // .bindPopup(data.results[i].text)
+            // .openPopup();
+            
+            loadingRouting = true;
+            get_position_of_new_marker(data.results[i].latlng.lat,data.results[i].latlng.lng)
+        }
+    });
+    setTimeout(function(){$('.pointer').fadeOut('slow');},3400);
+
     var clusterMarker = [];
     
-    // ];
     
-    var customPopup = "Mozilla Toronto Offices<br/><img src='http://joshuafrazier.info/images/maptime.gif' alt='maptime logo gif' width='350px'/>";
+    
     var customOptions ={
         'maxWidth': '500',
         'class' : 'custom'
@@ -40,35 +57,41 @@ $(document).ready(function(){
     mymap.on('click',function(e){
         var lat = e.latlng.lat;
         var lon = e.latlng.lng;
-        var waypoints = [];
+        
         if(!loadingRouting){
             loadingRouting = true;
-        
-            if(myLocationMarker != null){
-                mymap.removeLayer(myLocationMarker)
-            }
-            myLocationMarker = L.marker([lat,lon], {icon: redMarker}).addTo(mymap);
-            evac.forEach(function(element){
-                waypoints.push(L.latLng(element['latlng']))
-            })
-            waypoints.push(L.latLng(lat,lon))
-            evac.forEach(function(element){
-                routing = L.Routing.control({
-                    waypoints:[
-                        L.latLng(element['latlng']),
-                        L.latLng(lat,lon),
-                    ],
-                    createMarker: function(i, waypoints) {
-                    },
-                    router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
-                    routeWhileDragging:false,
-                }).addTo(mymap);
-                allDistance.push(routing)
-                
-            })
-            get_all_distance();
+            get_position_of_new_marker(lat,lon)
+            
         }
     })
+
+    function get_position_of_new_marker(lat,lon){
+        var waypoints = [];
+        if(myLocationMarker != null){
+            mymap.removeLayer(myLocationMarker)
+        }
+        myLocationMarker = L.marker([lat,lon], {icon: redMarker}).addTo(mymap);
+        evac.forEach(function(element){
+            waypoints.push(L.latLng(element['latlng']))
+        })
+        waypoints.push(L.latLng(lat,lon))
+        evac.forEach(function(element){
+            routing = L.Routing.control({
+                waypoints:[
+                    L.latLng(element['latlng']),
+                    L.latLng(lat,lon),
+                ],
+                createMarker: function(i, waypoints) {
+                },
+                router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
+                routeWhileDragging:false,
+            }).addTo(mymap);
+            allDistance.push(routing)
+            
+        })
+        get_all_distance();
+    }
+
     function get_all_distance(){
         $('#loadingRouting').show();
         var newWaypoints = [];
@@ -100,7 +123,7 @@ $(document).ready(function(){
             newRouting.spliceWaypoints(0,2);
         }
         newRouting = L.Routing.control({
-            waypoints:data['latlng'],
+            waypoints:data.latlng,
             createMarker: function(i, waypoints) {
             },
             router: L.Routing.graphHopper('07737b5f-3b17-46b5-ab87-258dae0a2fd6'),
