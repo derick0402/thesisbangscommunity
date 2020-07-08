@@ -90,10 +90,11 @@ $(document).ready(function(){
             
         })
         get_all_distance();
+        $('#loadingRouting').show();
     }
 
     function get_all_distance(){
-        $('#loadingRouting').show();
+        
         var newWaypoints = [];
         var add = 0;
         allDistance.forEach(function(element,index){
@@ -115,7 +116,7 @@ $(document).ready(function(){
             })
             var filtered = newWaypoints.sort(function(a, b){return a.distance-b.distance});
             nearest_evacuation(filtered[0])
-        },add + 2000);
+        },add + 3000);
     }
     var newRouting = null;
     function nearest_evacuation(data){
