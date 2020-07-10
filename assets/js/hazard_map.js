@@ -217,13 +217,36 @@ $(document).ready(function(){
         
     }
     function style(feature) {
+        var color = "";
+        var dens = feature.properties.density;
+        if(dens == "Rain Affected Landslide - Very High"){
+            color = '#580000'
+        }
+        else if(dens == "Rain Affected Landslide - High"){
+            color = '#980000';
+        }
+        else if(dens == "Rain Affected Landslide - Moderate"){
+            color = '#D00000';
+        }
+        else if(dens == "Rainfall Rate - Moderate"){
+            color = '#228B22';
+        }
+        else if(dens == "Rainfall Rate - Low"){
+            color = '#90EE90';
+        }
+        else if(dens == "Ground Rapture"){
+            color = '#FFA500';
+        }
+        else{
+            color = "#FF0000"
+        }
         return {
             fillColor: getColor(feature.properties.density),
-            weight: 1,
+            weight: 2,
             opacity: 1,
-            color: 'white',
+            color: color,
             dashArray: '0',
-            fillOpacity: 0.7
+            fillOpacity: 0.8
         };
     }
     
