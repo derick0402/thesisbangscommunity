@@ -24,22 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://localhost/thesisbangscommunity/';
-// $root=(isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
-// $root.= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
-// $config['base_url'] = $root;
-if(isset($_SERVER['REQUEST_SCHEME']))
-{
-    $auto_base_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/';
-    $custom_base_url = "thesisbangscommunity";
-
-    if (strpos($auto_base_url, 'localhost') !== false) {
-        $auto_base_url .= $custom_base_url."/";
-    }
-}else {
-    $auto_base_url = "https://mdrrmo.herokuapp.com/";
-}
-
-$config['base_url'] = $auto_base_url;
+$root=(isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
+$root.= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+$config['base_url'] = $root;
 
 /*
 |--------------------------------------------------------------------------
