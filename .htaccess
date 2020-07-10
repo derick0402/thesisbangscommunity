@@ -1,7 +1,19 @@
 <IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}/$1 [R,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L,QSA] 
+RewriteRule .* index.php?/$0 [PT,L]
 </IfModule>
+
+
+#localhost
+#<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteCond $1 !^(index\.php|resources|robots\.txt)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L,QSA] 
+#</IfModule>
